@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="button">
+        <div class="ball"></div><!--ball-->
+    </div><!--button-->
+
+    <script>
+        document.querySelector('.ball').addEventListener('click', () => {
+        const button = document.querySelector('.button');
+        document.querySelector('.ball').classList.toggle('ball-move');
+        document.body.classList.toggle('dark');
+        button.classList.toggle('button-dark', document.body.classList.contains('dark'));
+       });
+    </script>
+
+</body>
+</html>
